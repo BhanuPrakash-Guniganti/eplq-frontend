@@ -271,8 +271,14 @@ body {
     display: none; /* keep only circle to save space */
   }
 
+  /* ✅ show menu links on mobile */
   .top-bar-nav {
-    display: none; /* later you can replace with a burger */
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.3rem 0 0.4rem;
   }
 
   .top-bar-actions {
@@ -289,6 +295,7 @@ body {
     height: 24px;
   }
 }
+
 
 /* ===== CARD / ABOUT / CONTACT RESPONSIVE ===== */
 
