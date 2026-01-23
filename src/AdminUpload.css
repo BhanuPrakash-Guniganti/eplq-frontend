@@ -1,0 +1,199 @@
+/* ===== Admin Page Layout ===== */
+.admin-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f3f4f6;
+  padding: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* ===== Admin Header ===== */
+.admin-header {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 4px;
+}
+
+
+
+.app-name {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.logout-button {
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: none;
+  background: #e11d48;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ===== Main Card ===== */
+.admin-card {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 28px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.admin-title {
+  margin: 0 0 12px;
+  font-size: 22px;
+}
+
+/* ===== Form Controls ===== */
+.admin-form-row {
+  margin-top: 10px;
+}
+
+.admin-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.admin-input,
+.admin-select,
+.admin-textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  font-size: 14px;
+}
+
+.admin-button {
+  margin-top: 15px;
+  padding: 8px 20px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #1d3557, #457b9d);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ===== POI List ===== */
+.admin-poi-list {
+  margin-top: 20px;
+}
+
+.admin-poi-item {
+  border: 1px solid #e1e5ea;
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* ========= Medium screens (≤ 1024px) ========= */
+@media (max-width: 1024px) {
+  .admin-page {
+    padding: 12px;
+  }
+
+  .admin-card {
+    padding: 20px 22px;
+  }
+
+  .admin-title {
+    font-size: 20px;
+  }
+}
+
+/* ========= Tablets (≤ 768px) ========= */
+@media (max-width: 768px) {
+  .admin-page {
+    align-items: stretch;          /* card fills width */
+    padding: 12px 10px;
+  }
+
+
+  .app-name {
+    font-size: 16px;
+  }
+
+  .logout-button {
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+
+  .admin-card {
+    max-width: 100%;
+    margin: 4px auto 0;
+    padding: 18px 16px;
+    border-radius: 10px;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  }
+
+  .admin-input,
+  .admin-select,
+  .admin-textarea {
+    font-size: 13px;
+    padding: 7px 9px;
+  }
+}
+
+/* ========= Phones (≤ 480px) ========= */
+@media (max-width: 480px) {
+  .admin-page {
+    padding: 10px 8px;
+  }
+
+  .app-name {
+    font-size: 15px;
+  }
+
+  .logout-button {
+    padding: 4px 12px;
+    font-size: 12px;
+  }
+
+  .admin-card {
+    padding: 14px 12px;
+    border-radius: 8px;
+  }
+
+  .admin-title {
+    font-size: 18px;
+  }
+
+  .admin-poi-item {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .admin-page {
+    align-items: stretch;
+    padding: 12px 10px;
+  }
+
+  .admin-header {
+    max-width: 100%;
+    padding: 6px 0;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .admin-header {
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+}

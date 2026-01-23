@@ -1,0 +1,441 @@
+/* =========================================================
+   GLOBAL RESET (Optional but recommended)
+   ========================================================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f4f7fb;
+  color: #1f2933;
+}
+
+/* =========================================================
+   TOP HEADER BAR (Slim + Premium)
+   ========================================================= */
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.25rem 0.9rem; /* ✅ slim height */
+  background: #0b3363;
+  color: #fff;
+  width: 100%;
+  max-width: none;
+  border-radius: 0;
+  margin: 0;
+  
+
+  /* ✅ premium but not heavy */
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.18);
+}
+
+/* left: logo + text */
+.top-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.logo-circle {
+  width: 34px; /* ✅ smaller */
+  height: 34px;
+  font-size: 0.7rem;
+  border-radius: 50%;
+  background: #fff;
+  color: #0b3363;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 800;
+}
+
+.logo-text {
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+}
+
+/* center: nav links */
+.top-bar-nav {
+  display: flex;
+  gap: 0.9rem; /* ✅ tighter */
+}
+
+.nav-link {
+  color: #e3e9f5;
+  text-decoration: none;
+
+  font-size: 0.9rem;
+  padding: 0.2rem 0.25rem; /* ✅ less height */
+
+  transition: 0.2s ease;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* right: actions */
+.top-bar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  position: relative;
+}
+
+/* wrapper for admin + profile */
+.admin-box {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+
+  /* ✅ softer than solid dark */
+  background: rgba(255, 255, 255, 0.08);
+
+  /* ✅ remove heavy shadow */
+  box-shadow: none;
+
+  /* ✅ premium border */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.pill-button {
+  border: none;
+  border-radius: 999px;
+
+  padding: 0.28rem 0.75rem; /* ✅ slim */
+  font-size: 0.8rem; /* ✅ slim */
+  font-weight: 600;
+
+  cursor: pointer;
+  background: #ffffff;
+  color: #0b3363;
+
+  transition: 0.2s ease;
+}
+
+.pill-button:hover {
+  transform: translateY(-1px);
+}
+
+.pill-button.admin {
+  padding: 0.24rem 0.7rem;
+  font-size: 0.78rem;
+}
+
+.pill-button.danger {
+  background: #e63946;
+  color: #ffffff;
+}
+
+/* profile icon + dropdown */
+.profile-circle {
+  width: 26px; /* ✅ smaller */
+  height: 26px;
+  border-radius: 50%;
+  background: #fbfcff;
+  color: #0b3363;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.profile-circle:hover {
+  transform: translateY(-1px);
+}
+
+.profile-icon {
+  font-size: 0.75rem;
+}
+
+/* dropdown menu */
+.profile-menu {
+  position: absolute;
+  right: 0;
+  top: 2.4rem;
+
+  background: #ffffff;
+  color: #1f2933;
+
+  border-radius: 0.6rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
+  min-width: 180px;
+
+  z-index: 50;
+  padding: 0.35rem 0;
+}
+
+.profile-menu-item {
+  padding: 0.5rem 0.95rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.profile-menu-item:hover {
+  background: #f3f4f6;
+}
+
+.profile-menu-item.as-button {
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* =========================================================
+   RESPONSIVENESS
+   ========================================================= */
+
+/* ===== HEADER RESPONSIVE TWEAKS ===== */
+
+/* Medium screens (tablets / small laptops) */
+@media (max-width: 1024px) {
+  .top-bar {
+    padding: 0.25rem 0.75rem;
+  }
+
+  .logo-circle {
+    width: 30px;
+    height: 30px;
+    font-size: 0.7rem;
+  }
+
+  .logo-text {
+    font-size: 0.85rem;
+  }
+
+  .pill-button,
+  .pill-button.admin {
+    padding: 0.24rem 0.65rem;
+    font-size: 0.78rem;
+  }
+}
+
+/* Tablets & large phones */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-wrap: wrap;
+    row-gap: 0.4rem;
+    padding-inline: 0.7rem;
+    border-radius: 0; /* flush bar on smaller screens */
+  }
+
+  .top-bar-left {
+    flex: 1;
+  }
+
+  .top-bar-nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-bottom: 0.2rem;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+    padding: 0.15rem 0.2rem;
+  }
+
+  .top-bar-actions {
+    gap: 0.35rem;
+  }
+
+  .admin-box {
+    padding: 0.1rem 0.35rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .logo-text {
+    display: none; /* keep only circle to save space */
+  }
+
+  .top-bar-nav {
+    display: none; /* later you can replace with a burger */
+  }
+
+  .top-bar-actions {
+    margin-left: auto;
+  }
+
+  .pill-button.danger {
+    padding: 0.22rem 0.55rem;
+    font-size: 0.76rem;
+  }
+
+  .profile-circle {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* ===== CARD / ABOUT / CONTACT RESPONSIVE ===== */
+
+@media (max-width: 1024px) {
+  .card {
+    max-width: 900px;
+    padding: 0.9rem 1.8rem 1.5rem;
+  }
+
+  .about-container {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%;
+    margin: 1rem auto;
+    padding: 0.9rem 1.2rem 1.4rem;
+    border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
+  }
+
+  .card-header h1,
+  .card-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .about-container {
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    margin-top: 0.7rem;
+    padding: 0.85rem 0.9rem 1.2rem;
+    border-radius: 10px;
+  }
+
+  .about-container p,
+  .about-container li {
+    font-size: 0.9rem;
+  }
+
+  .back-button {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+  }
+}
+
+/* =========================================================
+   CARD LAYOUT (your main white container)
+   ========================================================= */
+
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.14);
+
+  padding: 1rem 2.2rem 1.6rem;
+  margin: 1.5rem auto;
+  max-width: 980px;
+}
+
+.card-header {
+  margin-bottom: 0.6rem;
+}
+
+.card-header h1,
+.card-header h2 {
+  margin: 0.2rem 0 0.4rem;
+  line-height: 1.2;
+}
+
+.card-header p {
+  margin: 0;
+  margin-bottom: 0.8rem;
+  opacity: 0.85;
+}
+
+/* =========================================================
+   ABOUT / CONTACT CONTAINER
+   ========================================================= */
+
+.about-container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem;
+}
+
+.page-content {
+  padding-top: 1rem;
+}
+
+.about-container p {
+  margin: 0.6rem 0;
+  line-height: 1.6;
+}
+
+.about-container h2 {
+  margin-top: 1.2rem;
+  margin-bottom: 0.6rem;
+  font-size: 1.25rem;
+}
+
+.about-container h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.about-container ul {
+  margin: 0.4rem 0 0.8rem;
+  padding-left: 1.2rem;
+}
+
+.about-container li {
+  margin: 0.35rem 0;
+}
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.back-button {
+  border: none;
+  background: transparent;
+  color: #1d4ed8;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.back-button:hover {
+  text-decoration: underline;
+}
+
+/* Logout subtle red text */
+.profile-menu-item.logout {
+  color: #d9534f;
+  font-weight: 600;
+}
+
+.profile-menu-item.logout:hover {
+  background: #fdecea;
+  color: #b52b27;
+}

@@ -1,0 +1,676 @@
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: #f4f6fb;   
+}
+
+.card {
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+  padding: 2rem 2.5rem;
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.card-subtitle {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+/* =====================
+   Search form
+   ===================== */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 24px;
+  margin-bottom: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.input {
+  padding: 9px 10px;
+  border-radius: 10px;
+  border: 1px solid #d4d4d8;
+  font-size: 14px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #0f766e;
+  box-shadow: 0 0 0 2px rgba(15, 118, 110, 0.25);
+}
+
+/* Buttons row */
+
+.button-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.button {
+  padding: 9px 22px;
+  border-radius: 999px;
+  border: none;
+  background: #0f766e;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.secondary-button {
+  background: #1d4ed8;
+}
+
+/* Use my location as full-width primary */
+
+.button.secondary-button {
+  background-color: #0052cc;
+  color: white;
+  width: 100%;
+  border-radius: 999px;
+}
+
+/* Status + errors */
+
+.status {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+.status-error {
+  color: #b91c1c;
+  margin-top: 0.25rem;
+}
+
+.geo-error-text {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: #c0392b;
+}
+
+/* =====================
+   Results list
+   ===================== */
+
+.results-controls {
+  margin-top: 1.5rem;
+}
+
+.results-section {
+  margin-top: 1.5rem;
+}
+
+.results-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.results-info {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+}
+
+.results-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+  margin-top: 0.5rem;
+}
+
+.results-empty {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.results-empty-block {
+  border: 1px dashed #d4d4d8;
+  background: #fafafa;
+  padding: 16px 16px;
+  border-radius: 14px;
+  margin-top: 10px;
+}
+
+.results-empty-block h4 {
+  margin: 0 0 6px 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.results-empty-block p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+/* POI card */
+
+.poi-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  margin-bottom: 1rem;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease,
+    transform 0.1s ease;
+}
+
+.poi-card--active {
+  border: 2px solid #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+  transform: translateY(-1px);
+}
+
+.poi-name {
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.poi-meta,
+.poi-desc,
+.poi-distance {
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+/* POI actions */
+
+.poi-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.poi-actions .button {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+/* Favourite toggle */
+
+.fav-toggle {
+  border: none;
+  background: transparent;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #bbbbbb;
+  transition: color 0.15s ease, transform 0.1s ease;
+}
+
+.fav-toggle.is-fav {
+  color: #ff2e6c;
+}
+
+.fav-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Remove from favourites (used in favourites page) */
+
+.fav-remove {
+  background: #fff7cc;
+  color: #854d0e;
+  border: 1px solid #facc15;
+}
+
+.fav-remove:hover {
+  background: #eab308;
+}
+
+/* Fav counter */
+
+.fav-count {
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* =====================
+   Map + Drawer
+   ===================== */
+
+.map-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.reset-map-button {
+  background-color: #0057ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.reset-map-button:hover {
+  background-color: #0044c7;
+}
+
+/* prevent map watermark above drawer */
+.leaflet-container {
+  z-index: 1;
+}
+
+/* Drawer overlay */
+
+.poi-drawer-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 1999;
+}
+
+/* Bottom drawer */
+
+.poi-drawer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 760px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 18px 18px 0 0;
+  box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.18);
+  padding-bottom: env(safe-area-inset-bottom);
+  animation: drawer-slide-up 0.22s ease-out;
+  z-index: 2000;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.poi-drawer-header {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.4rem;
+}
+
+.poi-drawer-handle {
+  width: 42px;
+  height: 4px;
+  border-radius: 999px;
+  background: #d0d0d0;
+}
+
+.poi-drawer-body {
+  padding: 0.9rem 1.8rem 1.4rem;
+}
+
+.poi-drawer-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.poi-drawer-sub {
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.poi-drawer-desc {
+  margin-top: 0.6rem;
+  color: #444;
+  line-height: 1.4;
+  max-width: 60ch;
+}
+
+.poi-drawer-close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.9rem;
+  border: none;
+  background: transparent;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #777;
+}
+
+@keyframes drawer-slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.poi-drawer-buttons {
+  margin-top: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.poi-primary-btn,
+.poi-secondary-btn {
+  width: 100%;
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.poi-primary-btn {
+  background: #0057ff;
+  color: #fff;
+}
+
+.poi-primary-btn:hover {
+  background: #0044c7;
+}
+
+.poi-secondary-btn {
+  background: #003fa8;
+  color: #fff;
+}
+
+/* =====================
+   About section on POI card
+   ===================== */
+
+.about {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 14px;
+}
+
+.about-title {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.about-text {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* Disabled states */
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.input:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background: #f3f4f6;
+}
+
+/* =====================
+   POI details buttons (details page)
+   ===================== */
+
+.poi-details-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-start;
+  margin: 1.5rem 0;
+}
+
+.poi-details-actions .button,
+.poi-details-actions .secondary-button {
+  width: auto;
+  min-width: 160px;
+}
+
+/* Back / Maps / Fav buttons */
+
+.back-btn {
+  background: #6b7280;
+  color: #fff;
+}
+.back-btn:hover {
+  background: #4b5563;
+}
+.back-btn:active {
+  background: #374151;
+  transform: scale(0.98);
+}
+
+.maps-btn {
+  background-color: #047857;
+  color: #fff;
+}
+.maps-btn:hover {
+  background-color: #065f46;
+}
+.maps-btn:active {
+  background-color: #064e3b;
+  transform: scale(0.98);
+}
+
+.fav-btn {
+  background-color: #facc15;
+  color: #1f2937;
+}
+.fav-btn:hover {
+  background-color: #eab308;
+}
+.fav-btn:active {
+  background-color: #ca8a04;
+  transform: scale(0.98);
+}
+
+.back-btn:focus,
+.maps-btn:focus,
+.fav-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 87, 255, 0.25);
+}
+
+/* Title row in details */
+
+.poi-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.poi-title-row .poi-name {
+  margin: 0;
+}
+
+/* =====================
+   About/Contact sections (reuse card)
+   ===================== */
+
+.about-section {
+  margin-top: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.body-text {
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.bullet-list {
+  margin-left: 1.1rem;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+/* Back chip (About / Contact) */
+
+.back-button {
+  border: none;
+  background: rgba(37, 99, 235, 0.08);
+  color: #2563eb;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-bottom: 0.9rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.back-button:hover {
+  background: rgba(37, 99, 235, 0.16);
+}
+
+/* =====================
+   RESPONSIVE BREAKPOINTS
+   ===================== */
+
+/* Large tablets / small laptops */
+@media (max-width: 1024px) {
+  .page {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .card {
+    max-width: 800px;
+    padding: 1.8rem 2rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .page {
+    padding: 1.5rem 1rem;
+  }
+
+  .card {
+    max-width: 100%;
+    margin: 1rem auto;
+    padding: 1.5rem 1.4rem;
+    border-radius: 14px;
+    box-shadow: 0 14px 32px rgba(15, 23, 42, 0.12);
+  }
+
+  .card-header {
+    margin-bottom: 1.25rem;
+  }
+
+  .card-title {
+    font-size: 1.35rem;
+  }
+
+  .card-subtitle,
+  .body-text,
+  .bullet-list {
+    font-size: 0.92rem;
+  }
+
+  .form-grid {
+    grid-template-columns: minmax(0, 1fr); /* stack form */
+  }
+
+  .poi-drawer {
+    max-width: 100%;
+    border-radius: 16px 16px 0 0;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .page {
+    padding: 1.2rem 0.8rem 1.4rem;
+  }
+
+  .card {
+    padding: 1.2rem 1rem 1.3rem;
+    border-radius: 12px;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+
+  .card-subtitle,
+  .body-text,
+  .bullet-list {
+    font-size: 0.9rem;
+  }
+
+  .button-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .poi-card {
+    padding: 1rem 1.1rem;
+  }
+
+  .poi-details-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .back-button {
+    font-size: 0.85rem;
+    margin-bottom: 0.6rem;
+  }
+}
+
+/* whatever div wraps the map, e.g. .map-container */
+.map-container {
+  display: none;
+}

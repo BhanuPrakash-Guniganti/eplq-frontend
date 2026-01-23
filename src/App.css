@@ -1,0 +1,18 @@
+/* Root layout should NOT limit width or add padding */
+#root {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Optional: global utility, if you still use .card from here, otherwise remove */
+.card {
+  padding: 0;
+}
+
+/* Remove old logo / docs styles if unused */
+.logo,
+.logo.react,
+.read-the-docs {
+  display: none;
+}

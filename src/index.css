@@ -1,0 +1,34 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Arial, sans-serif;
+  line-height: 1.4;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global link reset (you can override in components) */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Let pages control layout – no centering here */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f4f7fb;
+  color: #1f2933;
+}
+
+/* Keep buttons neutral – your component CSS will style them */
+button {
+  font-family: inherit;
+}
+
+/* Optional: basic heading scale */
+h1 {
+  line-height: 1.2;
+}
