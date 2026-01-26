@@ -198,6 +198,14 @@ body {
   .logo-text { display: none; }
   .profile-circle { width: 24px; height: 24px; }
 }
+ .top-bar {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .top-bar {
+  min-height: 52px;
+}
+
 
 /* =========================================================
    CARD
