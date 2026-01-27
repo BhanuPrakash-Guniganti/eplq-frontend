@@ -6,15 +6,12 @@ function Header({ user }) {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
 
-  // ✅ login state
   const isLoggedIn = !!localStorage.getItem("eplq_token");
-
-  // ✅ NEW: read stored email for profile dropdown
   const email = localStorage.getItem("eplq_email");
 
   const handleLogout = () => {
     localStorage.removeItem("eplq_token");
-    localStorage.removeItem("eplq_email"); // ✅ NEW
+    localStorage.removeItem("eplq_email");
     localStorage.removeItem("eplq_searchDraft");
     setOpen(false);
     navigate("/login");
@@ -28,27 +25,24 @@ function Header({ user }) {
       </div>
 
       <nav className="top-bar-nav">
-        <NavLink to="/" className="nav-link">
-          Home
-        </NavLink>
         <NavLink to="/search" className="nav-link">
           Search POIs
         </NavLink>
+
         <NavLink to="/about" className="nav-link">
           About
         </NavLink>
+
         <NavLink to="/contact" className="nav-link">
           Contact
         </NavLink>
 
-        {/* ✅ Only logged-in users */}
         {isLoggedIn && (
           <NavLink to="/favourites" className="nav-link">
             My Favourites
           </NavLink>
         )}
 
-        {/* ✅ Not logged in → show Login & Register */}
         {!isLoggedIn && (
           <>
             <NavLink to="/login" className="nav-link">
@@ -61,13 +55,12 @@ function Header({ user }) {
         )}
       </nav>
 
-      {/* ✅ Right side actions */}
       {isLoggedIn && (
         <div className="top-bar-actions">
           <div className="admin-box">
             {user?.role === "admin" && (
               <button
-                className="pill-button admin"
+                className="pill-button admin desktop-only"
                 onClick={() => navigate("/admin/upload")}
               >
                 Admin upload
@@ -82,23 +75,32 @@ function Header({ user }) {
 
             {open && (
               <div className="profile-menu">
-                {/* ✅ NEW: show full email */}
                 <div className="profile-menu-item">{email || "User"}</div>
 
-                {/* optional: show role line */}
                 <div className="profile-menu-item">
                   Role: {user?.role || "user"}
                 </div>
 
+                {/* ⭐ Styled Admin upload inside menu */}
+                {user?.role === "admin" && (
+                  <button
+                    className="profile-menu-item as-button admin-upload"
+                    onClick={() => {
+                      setOpen(false);
+                      navigate("/admin/upload");
+                    }}
+                  >
+                    Admin upload
+                  </button>
+                )}
+
                 <button
-  type="button"
-  className="profile-menu-item as-button logout"
-  onClick={handleLogout}
->
-  Logout
-</button>
-
-
+                  type="button"
+                  className="profile-menu-item as-button logout"
+                  onClick={handleLogout}
+                >
+                  Logout
+                </button>
               </div>
             )}
           </div>

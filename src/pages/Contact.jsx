@@ -20,8 +20,8 @@ function Contact() {
           <h3 className="section-title">Support</h3>
           <p className="body-text">
             <strong>Email:</strong>{" "}
-            <a href="mailto:support.eplqpoifinder@gmail.com">
-              support.eplqpoifinder@gmail.com
+            <a href="mailto:connectwithguniganti@gmail.com">
+              connectwithguniganti@gmail.com
             </a>
             <br />
             <strong>Location:</strong> Hyderabad, Telangana, India
@@ -31,9 +31,8 @@ function Contact() {
         <section className="about-section">
           <h3 className="section-title">Availability</h3>
           <p className="body-text">
-            Monday – Saturday: 9:00 AM – 6:00 PM
-            <br />
-            Sunday: Closed
+            I am available for full-time work. Feel free to reach out via email
+            for any inquiries or opportunities.
           </p>
         </section>
 
@@ -42,7 +41,7 @@ function Contact() {
           <p className="body-text">
             This project was designed and developed by{" "}
             <a
-              href="https://your-portfolio-link.com"
+              href="https://bhanuprakash-dev.netlify.app/"
               target="_blank"
               rel="noreferrer"
             >
@@ -54,17 +53,17 @@ function Contact() {
             <li>
               Portfolio:{" "}
               <a
-                href="https://your-portfolio-link.com"
+                href="https://https://bhanuprakash-dev.netlify.app/"
                 target="_blank"
                 rel="noreferrer"
               >
-                your-portfolio-link.com
+                portfolio.com
               </a>
             </li>
             <li>
               LinkedIn:{" "}
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/bhanu-prakash-guniganti-405856295/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -73,7 +72,7 @@ function Contact() {
             </li>
             <li>
               GitHub:{" "}
-              <a href="https://github.com" target="_blank" rel="noreferrer">
+              <a href="https://github.com/BhanuPrakash-Guniganti" target="_blank" rel="noreferrer">
                 github.com
               </a>
             </li>

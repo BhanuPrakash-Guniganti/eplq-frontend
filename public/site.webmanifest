@@ -1,9 +1,11 @@
 {
-  "name": "EPLQ POI Finder",
+  "name": "EPLQ Secure POI Finder",
   "short_name": "EPLQ",
+  "description": "Secure Points of Interest Finder",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#0b3363",
+  "background_color": "#ffffff",
   "theme_color": "#0b3363",
   "icons": [
     {

@@ -58,7 +58,7 @@ function About() {
           <p className="body-text">
             I’m{" "}
             <a
-              href="https://your-portfolio-link.com"
+              href="https://bhanuprakash-dev.netlify.app/"
               target="_blank"
               rel="noreferrer"
             >
