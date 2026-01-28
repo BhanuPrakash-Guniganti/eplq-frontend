@@ -53,7 +53,7 @@ function Contact() {
             <li>
               Portfolio:{" "}
               <a
-                href="https://https://bhanuprakash-dev.netlify.app/"
+                href="https://bhanuprakash-dev.netlify.app/"
                 target="_blank"
                 rel="noreferrer"
               >
